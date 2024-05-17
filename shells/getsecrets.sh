@@ -1,4 +1,4 @@
-PROJECT=scrmin
+PROJECT=YOUR_PROJECT
 SECRET=redis_secrets
 P=$(gcloud config get project)
 if [ "$P" = "$PROJECT" ] ; then
