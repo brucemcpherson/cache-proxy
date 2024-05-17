@@ -1,0 +1,23 @@
+{
+  "name": "redis-proxy",
+  "version": "1.0.0",
+  "description": "extended redis proxy client",
+  "main": "index.mjs",
+  "directories": {
+    "test": "test"
+  },  
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "bruce mcpherson",
+  "license": "ISC",
+  "dependencies": {
+    "delay": "^6.0.0",
+    "ioredis": "^5.4.1",
+    "node-gzip": "^1.1.2",
+    "object-hash": "^3.0.0"
+  },
+  "devDependencies": {
+    "ava": "^6.1.3"
+  }
+}
