@@ -17,10 +17,10 @@ const getRedisProxy = async ({
   extraConfig = "redis",
 }) => {
   // we can have different configs for different databases/or partitions of the same database
-const getConfig = ({ database, extraConfig }) => ({
-  ...redisConfigs.databases[database],
-  ...cacheSettings[extraConfig],
-});
+  const getConfig = ({ database, extraConfig }) => ({
+    ...redisConfigs.databases[database],
+    ...cacheSettings[extraConfig],
+  });
 
   // i get my parameters elsewhere from secret manager via env
   config = getConfig({ database, extraConfig });
@@ -192,8 +192,6 @@ const getConfig = ({ database, extraConfig }) => ({
   return testConnectivity ? testConnect({ client: proxy, useProxy }) : proxy;
 };
 
-
-
 // test connecttivity and return client
 const testConnect = async ({ client, useProxy }) => {
   // use an object if useProxy, otherwise a string
@@ -260,5 +258,5 @@ export default {
   cacheAge,
   multiGet,
   getRedisProxy,
-  fetchConfig
-}
+  fetchConfig,
+};
