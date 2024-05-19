@@ -10,7 +10,7 @@ const getData = () => {
     database: "local",
     extraConfig: "test",
     testConnectivity: true,
-      redisConfigs: getRedisConfigs(),
+      redisConfigs: getRedisConfigs(),  
   }).then((p) => {
     const redisProxy = p;
     const config = fetchConfig();
